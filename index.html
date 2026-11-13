@@ -16,28 +16,28 @@
 .ktl *,.ktl *:before,.ktl *:after{box-sizing:border-box}
 :where(.ktl) a{text-decoration:none;color:inherit}
 :where(.ktl) :is(p,h1,h2,h3){margin:0}
-.ktl__col{max-width:440px;margin:0 auto;padding:16px 12px 40px}
+.ktl__col{max-width:440px;margin:0 auto;padding:20px 12px 40px}
 .ktl[data-sales="before"] [data-when]:not([data-when~="before"]),.ktl[data-sales="open"] [data-when]:not([data-when~="open"]),.ktl[data-sales="after"] [data-when]:not([data-when~="after"]){display:none!important}
-.ktl__hero{position:relative;border-radius:12px;overflow:hidden;background:#a19592 url('https://static.tildacdn.com/tild6234-3766-4332-b361-646134386166/Frame_2087330315.svg') center/cover no-repeat;padding:34px 18px 18px;text-align:center;color:#fff}
+.ktl__hero{position:relative;border-radius:12px;overflow:hidden;background:#a19592 url('https://static.tildacdn.com/tild6234-3766-4332-b361-646134386166/Frame_2087330315.svg') center/cover no-repeat;padding:40px 18px 22px;text-align:center;color:#fff}
 .ktl__logo{font-family:'KtlWide','Manrope',Arial,sans-serif;font-size:31px;line-height:1.15;letter-spacing:.01em;color:#fff;font-weight:400}
 .ktl__logo span{color:#4d4d4d}
 .ktl .ktl__lead{font-size:13px;line-height:1.45;margin:14px auto 26px;max-width:320px}
-.ktl__btn{display:flex;align-items:center;justify-content:center;gap:8px;min-height:50px;border-radius:72px;font-weight:700;font-size:12.5px;letter-spacing:.02em;text-transform:uppercase;transition:transform .15s ease,box-shadow .15s ease}
+.ktl__btn{display:flex;align-items:center;justify-content:center;gap:8px;min-height:54px;border-radius:72px;font-weight:700;font-size:13px;letter-spacing:.02em;text-transform:uppercase;transition:transform .15s ease,box-shadow .15s ease}
 .ktl__btn:active{transform:scale(.98)}
 .ktl__btn--orange{background:linear-gradient(51deg,var(--o1),var(--o2));color:#fff;box-shadow:0 6px 18px rgba(255,97,47,.28)}
 .ktl__btn--light{background:linear-gradient(64deg,#fff,#f3f3f3);color:var(--muted);min-height:44px;border-radius:22px}
 .ktl__btn--light.is-accent{color:var(--o2)}
 .ktl__btn--blue{background:linear-gradient(64deg,var(--blue1),var(--blue2));color:#fff;min-height:44px;border-radius:30px}
 .ktl__btn--dark{background:#262626;color:#fff}
-.ktl__btn svg{width:14px;height:14px;flex:none}
-.ktl .ktl__h2{font-size:15px;font-weight:700;text-transform:uppercase;margin:40px 0 18px;letter-spacing:.01em}
+.ktl__btn svg{width:16px;height:16px;flex:none}
+.ktl .ktl__h2{font-size:15px;font-weight:700;text-transform:uppercase;margin:48px 0 18px;letter-spacing:.01em}
 .ktl__who{display:grid;gap:16px}
 .ktl__who li{display:grid;grid-template-columns:28px 1fr;gap:14px;list-style:none}
 .ktl__who ul{margin:0;padding:0}
 .ktl__num{width:28px;height:28px;border-radius:50%;background:linear-gradient(51deg,var(--o1),var(--o2));color:#fff;font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center;box-shadow:0 3px 10px rgba(255,97,47,.3)}
 .ktl__who b{display:block;font-size:13px;font-weight:700;margin-bottom:4px}
 .ktl__who p{font-size:13px;line-height:1.35;font-weight:500;color:#555}
-.ktl__quote{display:grid;grid-template-columns:76px 1fr;gap:14px;align-items:center;background:#fff;border-radius:12px;padding:16px;margin-top:22px}
+.ktl__quote{display:grid;grid-template-columns:76px 1fr;gap:14px;align-items:center;background:#fff;border-radius:12px;padding:20px 16px;margin-top:24px}
 .ktl__quote img{width:76px;height:76px;border-radius:50%;object-fit:cover;display:block}
 .ktl__quote i{display:block;font-style:normal;color:#fe602e;font-size:34px;line-height:.8;font-weight:700;height:20px}
 .ktl__quote p{font-size:13px;line-height:1.35}
@@ -67,7 +67,7 @@
 .ktl__help p{font-size:14px;font-weight:500;line-height:1.35;color:#272727;margin:0 auto 22px;max-width:320px}
 .ktl__foot{background:#393939;color:#cbcbcb;font-size:12.5px;line-height:1.4}
 .ktl__foot .ktl__col{padding:22px 12px 34px}
-.ktl__foot a{display:flex;align-items:center;gap:10px;margin-top:14px}
+.ktl__foot a{max-width:300px;display:flex;align-items:center;gap:10px;margin-top:14px}
 .ktl__foot a:hover{color:#fff}
 .ktl__foot img{width:24px;height:24px;display:block}
 .ktl__docs{margin-top:22px}
@@ -89,7 +89,7 @@
 
   <h2 class="ktl__h2">Кому подойдут наши программы</h2>
   <div class="ktl__who"><ul>
-   <li><span class="ktl__num">1</span><div><b>Специалистам по движению</b><p>Тем, кто работает с телом клиентов и хочет системности, уверенности и понимания, а&nbsp;не заучивания.</p></div></li>
+   <li><span class="ktl__num">1</span><div><b>Специалистам по движению</b><p>Тем, кто работает с телом клиентов и хочет системности, уверенности и понимания, а&nbsp;не&nbsp;заучивания.</p></div></li>
   </ul><ul>
    <li><span class="ktl__num">2</span><div><b>Тем, кто хочет лучше понимать своё тело</b><p>Если есть напряжение или дискомфорт и хочется двигаться легче и безопаснее.</p></div></li>
   </ul></div>
@@ -149,7 +149,7 @@
     <span class="ktl__badge"><img src="https://static.tildacdn.com/tild6531-6362-4535-b864-353131353035/Vector_3.svg" alt="">7 дней бесплатно</span>
    </div>
    <h3>Kinezio Space</h3>
-   <p>Клуб осознанного движения и регулярных тренировок</p>
+   <p>Клуб осознанного движения<br>и регулярных тренировок</p>
    <a class="ktl__btn ktl__btn--blue" data-pass href="https://kineziofitness.online/kinezio-club">Подробнее <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
   </article>
 
