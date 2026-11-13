@@ -1,0 +1,199 @@
+<!-- Kinezio · таплинк кодом · невидимый таймер запуска · вставить в один блок T123 -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap">
+<style>
+@font-face{font-family:'KtlWide';src:url('https://static.tildacdn.com/tild3836-3830-4331-a432-613465626632/MursGothic-WideDark.woff') format('woff');font-weight:400;font-display:swap}
+.ktl{--o1:#ff7e55;--o2:#ff612f;--ink:#353535;--muted:#939594;--bg:#f5f5f5;--blue1:#029ee9;--blue2:#008ccf;font-family:'Manrope',Arial,sans-serif;color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased;text-align:left}
+.ktl *,.ktl *:before,.ktl *:after{box-sizing:border-box}
+:where(.ktl) a{text-decoration:none;color:inherit}
+:where(.ktl) :is(p,h1,h2,h3){margin:0}
+.ktl__col{max-width:440px;margin:0 auto;padding:16px 12px 40px}
+.ktl[data-sales="before"] [data-when]:not([data-when~="before"]),.ktl[data-sales="open"] [data-when]:not([data-when~="open"]),.ktl[data-sales="after"] [data-when]:not([data-when~="after"]){display:none!important}
+.ktl__hero{position:relative;border-radius:12px;overflow:hidden;background:#a19592 url('https://static.tildacdn.com/tild6234-3766-4332-b361-646134386166/Frame_2087330315.svg') center/cover no-repeat;padding:34px 18px 18px;text-align:center;color:#fff}
+.ktl__logo{font-family:'KtlWide','Manrope',Arial,sans-serif;font-size:31px;line-height:1.15;letter-spacing:.01em;color:#fff;font-weight:400}
+.ktl__logo span{color:#4d4d4d}
+.ktl .ktl__lead{font-size:13px;line-height:1.45;margin:14px auto 26px;max-width:320px}
+.ktl__btn{display:flex;align-items:center;justify-content:center;gap:8px;min-height:50px;border-radius:72px;font-weight:700;font-size:12.5px;letter-spacing:.02em;text-transform:uppercase;transition:transform .15s ease,box-shadow .15s ease}
+.ktl__btn:active{transform:scale(.98)}
+.ktl__btn--orange{background:linear-gradient(51deg,var(--o1),var(--o2));color:#fff;box-shadow:0 6px 18px rgba(255,97,47,.28)}
+.ktl__btn--light{background:linear-gradient(64deg,#fff,#f3f3f3);color:var(--muted);min-height:44px;border-radius:22px}
+.ktl__btn--light.is-accent{color:var(--o2)}
+.ktl__btn--blue{background:linear-gradient(64deg,var(--blue1),var(--blue2));color:#fff;min-height:44px;border-radius:30px}
+.ktl__btn--dark{background:#262626;color:#fff}
+.ktl__btn svg{width:14px;height:14px;flex:none}
+.ktl .ktl__h2{font-size:15px;font-weight:700;text-transform:uppercase;margin:40px 0 18px;letter-spacing:.01em}
+.ktl__who{display:grid;gap:16px}
+.ktl__who li{display:grid;grid-template-columns:28px 1fr;gap:14px;list-style:none}
+.ktl__who ul{margin:0;padding:0}
+.ktl__num{width:28px;height:28px;border-radius:50%;background:linear-gradient(51deg,var(--o1),var(--o2));color:#fff;font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center;box-shadow:0 3px 10px rgba(255,97,47,.3)}
+.ktl__who b{display:block;font-size:13px;font-weight:700;margin-bottom:4px}
+.ktl__who p{font-size:13px;line-height:1.35;font-weight:500;color:#555}
+.ktl__quote{display:grid;grid-template-columns:76px 1fr;gap:14px;align-items:center;background:#fff;border-radius:12px;padding:16px;margin-top:22px}
+.ktl__quote img{width:76px;height:76px;border-radius:50%;object-fit:cover;display:block}
+.ktl__quote i{display:block;font-style:normal;color:#fe602e;font-size:34px;line-height:.8;font-weight:700;height:20px}
+.ktl__quote p{font-size:13px;line-height:1.35}
+.ktl__quote strong{color:#fe602e;font-weight:700}
+.ktl__tag{display:flex;align-items:center;justify-content:space-between;margin:44px 0 14px}
+.ktl__tag span{display:inline-flex;align-items:center;gap:10px;padding:6px 16px;border-radius:40px;font-size:10px;font-weight:500;text-transform:uppercase}
+.ktl__tag--o span{background:rgba(255,127,55,.12);color:#ff6332}
+.ktl__tag--b span{background:rgba(1,140,208,.14);color:#254572}
+.ktl__tag img{width:13px;height:13px;display:block}
+.ktl__tag .ktl__swipe{width:20px;height:20px;opacity:.5}
+.ktl__rail{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding:0 12px;margin:0 -12px;padding:0 12px 6px;scrollbar-width:none;-webkit-overflow-scrolling:touch;cursor:grab}
+.ktl__rail::-webkit-scrollbar{display:none}
+.ktl__card{flex:0 0 calc(100% - 28px);max-width:360px;scroll-snap-align:start;position:relative;border-radius:12px;overflow:hidden;padding:18px 18px 18px;min-height:204px;display:flex;flex-direction:column;color:#fff;background:#8f8582 center/cover no-repeat}
+.ktl__card--dark{color:#232323}
+.ktl__badges{display:flex;flex-wrap:wrap;gap:6px}
+.ktl__badge{display:inline-flex;align-items:center;gap:6px;border:1px solid currentColor;border-radius:40px;padding:3px 12px 3px 8px;font-size:9.5px;font-weight:700;text-transform:uppercase;line-height:1.3}
+.ktl__badge img{width:12px;height:12px;display:block}
+.ktl__card h3{font-size:17px;font-weight:700;text-transform:uppercase;margin:16px 0 0;line-height:1.25}
+.ktl__card p{font-size:14px;font-weight:500;line-height:1.35;margin-top:8px}
+.ktl__card .ktl__btn{margin-top:auto}
+.ktl__card h3+.ktl__btn{margin-top:auto}
+.ktl__space{margin-top:0;min-height:252px;background:#294a7a url('https://static.tildacdn.com/tild6339-6161-4566-a339-393165356234/Group_2085665769.svg') center/cover no-repeat;flex:none;max-width:none}
+.ktl__space h3{margin-top:18px}
+.ktl__space .ktl__btn{margin-top:34px}
+.ktl__help{text-align:center;margin-top:56px}
+.ktl__help img{width:76px;height:auto;display:block;margin:0 auto 18px}
+.ktl__help p{font-size:14px;font-weight:500;line-height:1.35;color:#272727;margin:0 auto 22px;max-width:320px}
+.ktl__foot{background:#393939;color:#cbcbcb;font-size:12.5px;line-height:1.4}
+.ktl__foot .ktl__col{padding:22px 12px 34px}
+.ktl__foot a{display:flex;align-items:center;gap:10px;margin-top:14px}
+.ktl__foot a:hover{color:#fff}
+.ktl__foot img{width:24px;height:24px;display:block}
+.ktl__docs{margin-top:22px}
+.ktl__docs a{margin-top:12px}
+@media (min-width:700px){.ktl__col{padding-top:28px}.ktl__card{flex-basis:340px}}
+@media (prefers-reduced-motion:reduce){.ktl__btn{transition:none}}
+</style>
+
+<div class="ktl" id="ktl-root" data-sales="open">
+ <div class="ktl__col">
+
+  <section class="ktl__hero">
+   <h1 class="ktl__logo"><span>KINEZIO</span> FITNESS</h1>
+   <p class="ktl__lead" data-when="open">Фундамент движения.<br>Старт 7 декабря.<br>5 модулей, которые дадут вам полный инструментарий для диагностики и коррекции.</p>
+   <p class="ktl__lead" data-when="before after">Институт движения и восстановления тела. Обучаем понимать тело для профессии и для жизни.</p>
+   <a class="ktl__btn ktl__btn--orange" href="https://t.me/kineziofitnesscourse_bot" target="_blank" rel="noopener">Перейти в бот
+    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#fff"/><path d="M5.6 11.7l10.6-4.1c.5-.2.9.1.8.8l-1.8 8.5c-.1.6-.5.7-1 .5l-2.7-2-1.3 1.3c-.1.1-.3.3-.6.3l.2-2.8 5.1-4.6c.2-.2 0-.3-.3-.1l-6.3 4-2.7-.9c-.6-.2-.6-.6.1-.9z" fill="#ff612f"/></svg></a>
+  </section>
+
+  <h2 class="ktl__h2">Кому подойдут наши программы</h2>
+  <div class="ktl__who"><ul>
+   <li><span class="ktl__num">1</span><div><b>Специалистам по движению</b><p>Тем, кто работает с телом клиентов и хочет системности, уверенности и понимания, а&nbsp;не заучивания.</p></div></li>
+  </ul><ul>
+   <li><span class="ktl__num">2</span><div><b>Тем, кто хочет лучше понимать своё тело</b><p>Если есть напряжение или дискомфорт и хочется двигаться легче и безопаснее.</p></div></li>
+  </ul></div>
+
+  <div class="ktl__quote">
+   <img src="https://static.tildacdn.com/tild3633-6636-4462-a236-616661616663/Ellipse_6350.png" alt="Основатели Kinezio Fitness" loading="lazy" width="76" height="76">
+   <div><i>“</i><p><strong>Мы учим понимать движение</strong><br>и применять знания в реальной практике, уверенно и осознанно.</p></div>
+  </div>
+
+  <div class="ktl__tag ktl__tag--o"><span><img src="https://static.tildacdn.com/tild6365-3366-4336-a265-653365643931/Vector_4.svg" alt="">Программы для специалистов</span><img class="ktl__swipe" src="https://static.tildacdn.com/tild3133-6464-4136-a638-653634373264/tdesign_gesture-slid.svg" alt="Листайте"></div>
+
+  <div class="ktl__rail" data-rail>
+   <!-- Бесплатный пробный курс: в даты запуска — актуальный канал Практикума, вне запуска — прошлый пробник (ТЗ в Figma) -->
+   <article class="ktl__card" style="background-image:url('https://static.tildacdn.com/tild6636-3662-4963-b735-303865303635/Frame_2087330317.svg')">
+    <div class="ktl__badges">
+     <span class="ktl__badge" data-when="open"><img src="https://static.tildacdn.com/tild3839-3834-4262-a239-346162653530/Key_Square_2.png" alt="">Старт 23 ноября</span>
+     <span class="ktl__badge" data-when="before after"><img src="https://static.tildacdn.com/tild3839-3834-4262-a239-346162653530/Key_Square_2.png" alt="">Старт после регистрации</span>
+    </div>
+    <h3>Бесплатный пробный курс</h3>
+    <a class="ktl__btn ktl__btn--light is-accent" data-when="open" href="https://t.me/+jD2efeMN-5szMmZi" target="_blank" rel="noopener">Подробнее <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <a class="ktl__btn ktl__btn--light is-accent" data-when="before after" href="https://t.me/+jEUoHcbCU8xlNWUy" target="_blank" rel="noopener">Подробнее <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+   </article>
+
+   <article class="ktl__card" style="background-image:url('https://static.tildacdn.com/tild6633-3532-4337-a330-393435303963/Frame_2087330318.svg')">
+    <div class="ktl__badges"><span class="ktl__badge"><img src="https://static.tildacdn.com/tild3839-6431-4232-b333-366337393235/Key_Square_2.png" alt="">Старт после регистрации</span></div>
+    <h3>Модуль 0. Бесплатно</h3>
+    <a class="ktl__btn ktl__btn--light" data-pass href="https://kineziofitness.online/module-zero">Подробнее <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+   </article>
+
+   <article class="ktl__card ktl__card--dark" style="background-image:url('https://static.tildacdn.com/tild3964-6634-4662-a239-613662393035/Frame_2087330319.svg')">
+    <div class="ktl__badges"><span class="ktl__badge"><img src="https://static.tildacdn.com/tild6166-3461-4431-b335-306535636665/Key_Square_2.png" alt="">Старт после покупки</span></div>
+    <h3>Энциклопедия тренера</h3>
+    <a class="ktl__btn ktl__btn--light" data-pass href="https://kineziofitness.online/coach-encyclopedia">Подробнее <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+   </article>
+
+   <article class="ktl__card" style="background-image:url('https://static.tildacdn.com/tild3832-3138-4231-b632-613632396139/Frame_2087330320.svg')">
+    <div class="ktl__badges"><span class="ktl__badge"><img src="https://static.tildacdn.com/tild3834-3539-4163-a434-376439396631/Key_Square_2.png" alt="">Старт после покупки</span></div>
+    <h3>Мышечное тестирование (ММТ)</h3>
+    <a class="ktl__btn ktl__btn--light" data-pass href="https://kineziofitness.online/muscle-testing">Подробнее <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+   </article>
+
+   <article class="ktl__card" style="background-image:url('https://static.tildacdn.com/tild3866-3233-4164-b439-323662346164/Frame_2087330322.png')">
+    <div class="ktl__badges">
+     <span class="ktl__badge" data-when="open"><img src="https://static.tildacdn.com/tild3834-3539-4163-a434-376439396631/Key_Square_2.png" alt="">Старт 7 декабря</span>
+     <span class="ktl__badge"><img src="https://static.tildacdn.com/tild3262-3262-4531-a337-643737313966/Vector.svg" alt="">Флагманский курс</span>
+    </div>
+    <h3>Фундамент движения</h3>
+    <a class="ktl__btn ktl__btn--light" data-pass href="https://kineziofitness.online/course_foundation">Подробнее <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+   </article>
+  </div>
+
+  <div class="ktl__tag ktl__tag--b"><span><img src="https://static.tildacdn.com/tild6539-3038-4631-b034-363035386365/Vector_1.svg" alt="">Тем, кто хочет лучше понимать своё тело</span></div>
+
+  <article class="ktl__card ktl__space">
+   <div class="ktl__badges">
+    <span class="ktl__badge"><img src="https://static.tildacdn.com/tild3164-6130-4137-b335-663865383437/Key_Square_2.png" alt="">Старт после регистрации</span>
+    <span class="ktl__badge"><img src="https://static.tildacdn.com/tild6531-6362-4535-b864-353131353035/Vector_3.svg" alt="">7 дней бесплатно</span>
+   </div>
+   <h3>Kinezio Space</h3>
+   <p>Клуб осознанного движения и регулярных тренировок</p>
+   <a class="ktl__btn ktl__btn--blue" data-pass href="https://kineziofitness.online/kinezio-club">Подробнее <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+  </article>
+
+  <div class="ktl__help">
+   <img src="https://static.tildacdn.com/tild3036-6332-4837-b530-636138353531/kinezio_fitness.svg" alt="Kinezio Fitness" width="76" height="27">
+   <p>Если у вас возникли вопросы, то вы можете написать нам в Telegram заботы</p>
+   <a class="ktl__btn ktl__btn--dark" href="https://t.me/KinezioCare_bot" target="_blank" rel="noopener">Техническая поддержка</a>
+  </div>
+ </div>
+
+ <footer class="ktl__foot"><div class="ktl__col">
+  <p>ИП Одинцов Алексей Сергеевич<br>ИНН 780247753021<br>e-mail: Alekseyodincov@mail.ru</p>
+  <a href="https://wa.me/381611352885" target="_blank" rel="noopener"><img src="https://static.tildacdn.com/tild3164-3966-4533-b862-663662316137/21.svg" alt="">WhatsApp</a>
+  <a href="https://t.me/KINEZIOFITNESSCARE" target="_blank" rel="noopener"><img src="https://static.tildacdn.com/tild6262-3530-4237-a463-393161336263/121.svg" alt="">Telegram</a>
+  <div class="ktl__docs">
+   <a href="https://kineziofitness.online/personaldata">Политика в отношении обработки персональных данных</a>
+   <a href="https://kineziofitness.online/data-consent">Согласие на обработку персональных данных</a>
+   <a href="https://kineziofitness.online/part_oferta">Партнерское соглашение (Договор-оферта) о реферальной программе</a>
+   <a href="https://kineziofitness.online/oferta">Публичный договор оферта</a>
+   <a href="https://disk.yandex.ru/i/6i4WVHujKxe00A" target="_blank" rel="noopener">Программа обучения</a>
+   <a href="https://disk.yandex.ru/i/DFt3VA2VAkQqiA" target="_blank" rel="noopener">Договор об оказании платных образовательных услуг</a>
+   <a href="https://docs.yandex.ru/docs/view?url=ya-disk-public%3A%2F%2Fssctid2%2ByKQLUzBUPxthRb%2F8YNMpXJlcn5axXXezcNDHxcVk7saeTMvDzUPLLoO%2FEkI0e0it%2FP53JjBKdrjFug%3D%3D&amp;name=%D0%92%D1%8B%D0%BF%D0%B8%D1%81%D0%BA%D0%B0_%D0%B8%D0%B7_%D1%80%D0%B5%D0%B5%D1%81%D1%82%D1%80%D0%B0_%D0%BB%D0%B8%D1%86%D0%B5%D0%BD%D0%B7%D0%B8%D0%B8%CC%86_%E2%84%96_%D0%9B035_01271_78_01200195_%D0%98%D0%9F_%D0%9E%D0%94%D0%98%D0%9D%D0%A6%D0%9E%D0%92_1.pdf&amp;nosw=1" target="_blank" rel="noopener">Образовательная лицензия</a>
+   <a href="https://kineziofitness.online/mailing-consent">Согласие на получение информационных и рекламных рассылок</a>
+  </div>
+ </div></footer>
+</div>
+
+<script>
+/* Невидимый таймер запуска (время Москвы).
+ * До OPEN_MS и после CLOSE_MS — обычный вид: пробный курс «старт после регистрации» → прошлый пробник, в шапке «Институт движения…».
+ * С OPEN_MS до CLOSE_MS — запуск: пробный курс «старт 23 ноября» → новый канал Практикума, в шапке «Фундамент движения. Старт 7 декабря», у ФД плашка «старт 7 декабря».
+ * Ручной просмотр: ?sales=before | open | after. Сменить даты: числа ниже, new Date("2026-11-16T10:00:00+03:00").getTime().
+ */
+(function(){
+ var OPEN_MS=1794812400000;  /* 16.11.2026 10:00 МСК */
+ var CLOSE_MS=1796590800000; /* 07.12.2026 00:00 МСК — старт ФД 17 */
+ var PASS=['utm_source','utm_medium','utm_campaign','utm_content','utm_term','r'];
+ function forced(){try{var v=new URLSearchParams(location.search).get('sales');return v==='before'||v==='open'||v==='after'?v:null;}catch(e){return null;}}
+ function apply(root){
+  var s=forced()||(Date.now()<OPEN_MS?'before':Date.now()<CLOSE_MS?'open':'after');
+  root.setAttribute('data-sales',s);
+  if(forced())return;
+  var next=s==='before'?OPEN_MS:s==='open'?CLOSE_MS:0,wait=next-Date.now();
+  if(next&&wait>0)setTimeout(function(){apply(root);},Math.min(wait+500,36e5));
+ }
+ function pass(root){try{var q=new URLSearchParams(location.search),keep=PASS.filter(function(k){return q.get(k);});if(!keep.length)return;
+  [].forEach.call(root.querySelectorAll('a[data-pass]'),function(a){var u=new URL(a.getAttribute('href'),location.href);keep.forEach(function(k){u.searchParams.set(k,q.get(k));});a.setAttribute('href',u.toString());});}catch(e){}}
+ function drag(rail){var down=false,x0=0,s0=0,moved=false;
+  rail.addEventListener('mousedown',function(e){down=true;moved=false;x0=e.pageX;s0=rail.scrollLeft;rail.style.scrollSnapType='none';});
+  window.addEventListener('mousemove',function(e){if(!down)return;var dx=e.pageX-x0;if(Math.abs(dx)>4)moved=true;rail.scrollLeft=s0-dx;});
+  window.addEventListener('mouseup',function(){if(!down)return;down=false;rail.style.scrollSnapType='';});
+  rail.addEventListener('click',function(e){if(moved){e.preventDefault();moved=false;}},true);}
+ function boot(){var root=document.getElementById('ktl-root');if(!root||root.dataset.ready)return;root.dataset.ready='1';apply(root);pass(root);[].forEach.call(root.querySelectorAll('[data-rail]'),drag);}
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot);else boot();
+ window.addEventListener('load',boot);
+})();
+</script>
