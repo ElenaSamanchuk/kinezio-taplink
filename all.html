@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Таплинк Kinezio · все виды</title>
+<style>
+  :root { color-scheme: dark; }
+  body { margin: 0; background: #1d1d1f; color: #eee; font: 15px/1.5 system-ui, -apple-system, sans-serif; }
+  header { max-width: 1320px; margin: 0 auto; padding: 20px 16px 4px; }
+  h1 { font-size: 20px; margin: 0 0 6px; font-weight: 600; }
+  p { margin: 0 0 6px; color: #bbb; max-width: 900px; }
+  .now { color: #8ab4ff; font-size: 13px; }
+  .grid { max-width: 1320px; margin: 0 auto; padding: 12px 16px 32px; display: flex; flex-wrap: wrap; gap: 24px; justify-content: center; }
+  figure { margin: 0; width: 390px; max-width: 100%; }
+  figcaption { font-weight: 600; margin-bottom: 4px; }
+  figcaption small { display: block; font-weight: 400; color: #aaa; font-size: 13px; margin-bottom: 8px; }
+  iframe { width: 390px; max-width: 100%; height: 1900px; border: 1px solid #333; border-radius: 12px; background: #f5f5f5; display: block; }
+  .desk { max-width: 1320px; margin: 0 auto; padding: 0 16px 40px; }
+  .desk iframe { width: 100%; height: 900px; }
+  a { color: #8ab4ff; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Таплинк Kinezio: все виды рядом</h1>
+  <p>Страница переключается сама по времени Москвы. Запуск идёт с 16.11 10:00 до 06.12 23:59. Во время запуска пробный курс ведёт в новый канал Практикума. Вне запуска он ведёт на прошлый пробник.</p>
+  <p class="now" id="now"></p>
+</header>
+<div class="grid">
+  <figure><figcaption>Во время запуска<small>16.11 10:00 – 06.12 23:59</small></figcaption><iframe src="./?sales=open" title="Во время запуска" loading="lazy"></iframe></figure>
+  <figure><figcaption>До запуска<small>до 16.11 10:00</small></figcaption><iframe src="./?sales=before" title="До запуска" loading="lazy"></iframe></figure>
+  <figure><figcaption>После запуска<small>с 07.12</small></figcaption><iframe src="./?sales=after" title="После запуска" loading="lazy"></iframe></figure>
+</div>
+<div class="desk"><figure style="width:auto"><figcaption>Компьютер, во время запуска</figcaption><iframe src="./?sales=open" title="Компьютер" loading="lazy"></iframe></figure></div>
+<script>
+  var OPEN = 1794812400000, CLOSE = 1796590800000, n = Date.now();
+  document.getElementById('now').textContent = 'Сейчас по времени: ' + (n < OPEN ? 'до запуска' : n < CLOSE ? 'запуск' : 'после запуска');
+</script>
+</body>
+</html>
