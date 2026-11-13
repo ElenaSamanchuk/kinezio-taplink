@@ -7,7 +7,7 @@
 <title>Kinezio таплинк · вид до, во время и после запуска</title>
 <style>
   :root { color-scheme: dark; }
-  body { margin: 0; background: #1d1d1f; color: #eee; font: 15px/1.5 system-ui, -apple-system, sans-serif; }
+  body { margin: 0; background: #131313; color: #eee; font: 15px/1.5 system-ui, -apple-system, sans-serif; }
   header { padding: 20px 16px 8px; max-width: 1200px; margin: 0 auto; }
   h1 { font-size: 20px; margin: 0 0 6px; font-weight: 600; }
   p { margin: 0 0 8px; color: #bbb; }
@@ -25,13 +25,13 @@
 </head>
 <body>
 <header>
-  <h1>Таплинк Kinezio: три вида</h1>
+  <h1>Таплинк Kinezio «Бесплатный пробный курс»: три вида</h1>
   <p>Страница сама переключается по времени Москвы. До 16.11 10:00 и с 07.12: обычный вид, пробный курс «старт после регистрации» ведёт на прошлый пробник. С 16.11 10:00 до 06.12 23:59: запуск, пробный курс «старт 23 ноября» ведёт в новый канал Практикума, вверху «Фундамент движения. Старт 7 декабря».</p>
   <p class="now" id="now"></p>
   <div class="tabs" role="group" aria-label="Вид">
     <button data-s="before">До запуска</button>
-    <button data-s="open">Запуск</button>
-    <button data-s="after">После запуска</button>
+    <button data-s="open">Запуск открыт</button>
+    <button data-s="after">Запуск закрыт</button>
     <button data-s="">Как сейчас (по времени)</button>
   </div>
   <div class="dev" role="group" aria-label="Устройство">
@@ -43,9 +43,9 @@
 <script>
   var OPEN = 1794812400000, CLOSE = 1796590800000;
   var q = new URLSearchParams(location.search);
-  var s = q.has('sales') ? q.get('sales') : 'open', d = q.get('d') || 'phone';
+  var s = q.has('sales') ? q.get('sales') : 'open', d = q.get('d') || 'desk';
   var now = Date.now();
-  document.getElementById('now').textContent = 'Сейчас по времени: ' + (now < OPEN ? 'до запуска' : now < CLOSE ? 'запуск' : 'после запуска');
+  document.getElementById('now').textContent = 'Сейчас по времени: ' + (now < OPEN ? 'до запуска' : now < CLOSE ? 'запуск открыт' : 'запуск закрыт');
   function render() {
     document.getElementById('f').src = './?standalone=1' + (s ? '&sales=' + s : '');
     document.getElementById('wrap').className = 'frame' + (d === 'phone' ? ' phone' : '');
